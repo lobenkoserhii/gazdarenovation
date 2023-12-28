@@ -1,0 +1,10 @@
+.diagonal-clip {
+    height: 300px;
+    width: 200px;
+    float: left;
+    shape-outside: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+    
+  }
+  
+ 

@@ -1,0 +1,116 @@
+.swiper-container {
+  width: 100%;
+  height: 700px;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-general {
+  padding: 20px 0;
+  margin: 0 auto;
+  width: 1390px; 
+}
+
+.container-general .gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 650px;
+}
+
+.container-general .gallery-wrap .item {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  margin: 10px -40px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.8s ease;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.container-general .gallery-wrap .item:hover {
+  flex: 5;
+}
+
+.container-general .gallery-wrap .item .text-BGC {
+  position: absolute;
+  bottom: 10px; 
+  left: 45%; 
+  transform: translate(-60%, 0%); 
+  width: calc(100% - 100px); 
+  text-align: center; 
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.container-general .gallery-wrap .item:hover .text-BGC {
+  opacity: 0;
+}
+
+.container-general .gallery-wrap .item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(244, 195, 0, 0) 50%, #F4C300 100%);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  z-index: 9;
+}
+
+.container-general .gallery-wrap .item:hover::after {
+  opacity: 0;
+}
+
+.container-general .gallery-wrap .item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 15%;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  clip-path: polygon(35% 0%, 100% 0%, 75% 100%, 0% 100%);
+  filter: blur(0);
+  transition: filter 0.3s ease;
+  z-index: 8;
+  opacity: 0;
+}
+
+.container-general .gallery-wrap .item:hover::before {
+  filter: blur(100px);
+  opacity: 100;
+}
+
+.container-general .gallery-wrap .item .item-content {
+  position: absolute;
+  top: 50%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  z-index: 13;
+  text-align:left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  width: 40%;
+  color: white;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.container-general .gallery-wrap .item:hover .item-content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Создайте отдельный элемент для обтекания */

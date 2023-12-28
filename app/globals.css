@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,300;0,400;1,300;1,500&display=swap');
+
+/* Определение шрифтов */
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('/font/BebasNeuePro-BoldItalic.woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@font-face {
+  font-family: 'Bebas Neue ExtraBold';
+  src: url('/font/BebasNeueProExpandedExtraBoldIt.woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Background: #262626;
+}
+
+
+* {
+  font-family: 'Bebas Neue', 'Roboto';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;  
+  background: var(--Background);
+}
+
+@media (min-width: 640px) { 
+  .clip_3 {
+    
+    clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.clip {
+  clip-path: polygon(8% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.clip_1 {
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.clip_2 {
+  clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+
+}
+.clip_4 {
+  clip-path: polygon(0% 0%, 100% 0%, 85% 100%, 0% 100%);
+
+}
+
+
+/* styles/global.css */
+.hover-gradient::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, #F4C300, transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.group:hover .hover-gradient::after {
+  opacity: 1;
+}
+/* styles/global.css */
+.gradient-overlay::before, .gradient-overlay::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 35%; /* Градиент занимает 1/4 высоты */
+  background: linear-gradient(to bottom, rgb(38, 38,38, 1), transparent);
+  z-index: 10;
+}
+
+.gradient-overlay::before {
+  top: 0;
+}
+
+.gradient-overlay::after {
+  bottom: 0;
+  background: linear-gradient(to top,rgb(38, 38,38, 1), transparent);
+}
+/* Scroller Styles */
+.scroller__inner {
+  display: flex;
+  animation: scroll-animation 30s linear infinite;
+}
+
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+.swiper-button-next-custom, .swiper-button-prev-custom {
+  opacity: 0; /* Прозрачные на всех экранах */
+}
+
+@media (max-width: 1024px) {
+  .swiper-button-next-custom, .swiper-button-prev-custom {
+    opacity: 1; /* Видимые на экранах меньше 1024px */
+  }
+}
+ 
+.nav-item {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .nav-item::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms ease;
+    z-index: -1;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    cursor: pointer;
+  }
+
+  .nav-item:hover::before,
+  .nav-item.active-link::before {
+    opacity: 1;
+  }
+}
+
+.nav-item a {
+  display: block;
+}
+
+@media (max-width: 1023px) {
+  .nav-item.active-link a {
+    color: white !important;
+  }
+}
+
+.shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень для изображений */
+}
+/*Swiper*/
+
+.swiper-slide-blur {
+  filter: blur(3px); /* Установите желаемую степень размытия */
+}
+
+.swiper-slide.expanded {
+  transform: scale(1.4);
+}
+
+.swiper-slide.shrunk {
+  transform: scale(0.6);
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease;
+}
+
+
+.swiper-slide {
+  transition: flex-basis 0.3s ease-in-out;
+}
+
+.input-custom {
+  font-size: 1.1rem;
+  
+  background: transparent; /* Прозрачный фон */
+  border: none; /* Убрать все границы */
+  border-bottom: 2px solid #FFFFFF; /* Белая нижняя граница */
+  color: white; /* Белый текст */
+  outline: none; /* Убрать обводку при фокусе */
+  margin-left: 10px;
+  height: 1.1rem; /* Уменьшение высоты поля ввода */
+  line-height: 0.8rem; /* Установка высоты строки, соответствующей высоте поля */
+  padding: 0; /* Уменьшение внутренних отступов */
+}
+
+.input-custom:focus {
+  border-bottom-color: #F4C300; /* Цвет фокуса - желтый, измените на нужный код цвета */
+  color: #F4C300; /* Цвет текста при фокусе */
+}
+
+.service-title::before {
+  content: '• '; /* Символ кружка */
+  color: #fff; /* Цвет кружка, здесь черный */
+  font-size: 30px; /* Размер шрифта кружка */
+  margin-right: 10px; /* Отступ справа от кружка */
+}
+
+.active-tab {
+  background-color: white; /* или другой желаемый цвет */
+}
+.bg-gradient-with-image {
+  position: relative;
+}
+
+.bg-gradient-with-image::after {
+  content: '';
+  background-image: linear-gradient(0deg, #262626 0%, rgba(38, 38, 38, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
