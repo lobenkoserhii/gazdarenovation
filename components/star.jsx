@@ -22,7 +22,7 @@ const Stars = ({ fillColor = "#262626" }) => (
 
 function Star() {
   return (
-    <div className="absolute top-2 left-0 right-0 z-30">
+    <div className="NPC:absolute NPC:top-2 NPC:left-0 NPC:right-0 z-50 absolute top-[600px] right-0 left-0 ">
     <div className="flex flex-row justify-center items-center z-30">
     <div className="flex flex-col NPC:flex-row items-center justify-start whitespace-nowrap mx-10 ">
   <img src="./Google__G__Logo 2.svg" alt="Google"  className="w-[1.5rem] tablet:w-[2rem] mx-5 my-2.5 tablet:my-0"/>
