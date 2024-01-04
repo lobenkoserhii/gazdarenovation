@@ -38,16 +38,18 @@ const Stars = ({ fillColor = "#262626" }) => (
 function Hero() {
   return (
     <>
-    <Star/>
+   <Star customClass="NPC:absolute NPC:top-2 top-[600px]" zIndexClass="z-50" />
+
+
     <section className='h-[733px] relative'>
-    <div className="bg-[url('/bg_hero-mob.png')] NPC:bg-[url('/Hero_bg.png')] bg-cover bg-no-repeat bg-center h-full z-10">
+    <div className="bg-[url('/bg_hero-mob.png')] NPC:bg-[url('/Hero_bg.png')] bg-cover bg-no-repeat bg-center h-full z-10 bg-gradient-with-image_2">
       <div className='absolute top-[43px] inset-0 NPC:flex items-center'>
         <div className='text-center'>
         <h1 className="NPC:pl-[170px] pl-[100px] tracking-widest italic text-left text-4xl NPC:text-6xl font-extrabold font-SBE leading-15 text-White uppercase text-white">Revitalize Your</h1>
           <h1 className="NPC:pl-[150px] pl-[80px] tracking-widest italic text-left text-4xl NPC:text-6xl font-extrabold font-SBE leading-15 text-White uppercase  text-white ">Home, Exceeding</h1>
           <h1 className="NPC:pl-[130px] pl-[60px] tracking-widest italic text-left text-4xl NPC:text-6xl font-extrabold font-SBE leading-15 text-White uppercase  text-white ">Expectations </h1>
           <h1 className="NPC:pl-[110px] pl-[40px] tracking-widest italic text-left text-4xl NPC:text-6xl font-extrabold font-SBE leading-15 text-White uppercase  text-white ">with <span className='text-Yl uppercase'>gazda </span></h1>
-          <h1 className="NPC:pl-[90px]  pl-[20px] tracking-widest italic text-left text-4xl NPC:text-6xl font-extrabold font-SBE leading-15 text-White uppercase  text-white ">enovations!</h1>
+          <h1 className="NPC:pl-[90px]  pl-[20px] tracking-widest italic text-left text-4xl NPC:text-6xl font-extrabold font-SBE leading-15 text-White uppercase  text-white ">Renovations!</h1>
         </div>
       </div>
     </div>
@@ -85,12 +87,9 @@ function Hero() {
 <Scroller text="ABOUT US" />
 
 
-<div className="flex justify-center items-center w-full min-h-[400px] NPC:max-h-[500px] bg-Yl px-10 py-20 tablet:py-0">
+<div className="flex justify-center items-center w-full min-h-[400px] NPC:max-h-[500px] tablet:mb-[270px] bg-Yl px-10 py-20 tablet:py-0">
   <div className="flex flex-col tablet:flex-row justify-center mx-auto z-10">
-    {/* Общий контейнер для текста и изображений */}
-    <div className="flex flex-col tablet:flex-row items-center">
-
-      {/* Текстовый блок */}
+      <div className="flex flex-col tablet:flex-row items-center">
       <div className="text-BGC max-w-[650px] p-10">
         <h1 className="mb-3 text-xl tablet:text-3xl italic font-extrabold font-SB uppercase leading-tight">Welcome to Gazda Group Inc.</h1>
         <div className="text-sm tablet:text-lg ">
@@ -106,7 +105,7 @@ function Hero() {
 </div>
       </div>
 
-      {/* Контейнер для изображений */}
+      
       <div className="relative hidden tablet:block tablet:ml-10 flex-shrink-0">
       <img src="/aboautus_1.jpeg" alt="About Us" className="w-[306px] h-[417px] object-cover shadow-lg" style={{ transform: 'translateY(15%) translateX(50%)' }} />
       <img src="/aboautus_2.jpeg" alt="About Us" className="w-[306px] h-[417px] object-cover shadow-lg mt-4" style={{ transform: 'translateY(-5%) translateX(0%)' }} />

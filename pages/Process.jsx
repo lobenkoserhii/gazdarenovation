@@ -24,7 +24,7 @@ function Process() {
   return (
     <Layout>
       <div className="h-[733px] relative max-w-[1440px] mx-auto">
-        <Star />
+      <Star customClass="absolute top-2" zIndexClass="z-20" />
         
         <div className="h-full bg-[url('/Phase_2.png')] bg-cover bg-no-repeat bg-center opacity-50 blur-sm bg-gradient-with-image"></div>
     
@@ -39,7 +39,7 @@ function Process() {
      
       <Scroller text="our works" />
       <SliderWork />
-      <div className="bg-Yl clip_3 w-full flex flex-row justify-center items-center py-3 NPC:py-10 NPC:my-10 z-30">
+      <div className="bg-Yl clip_3 w-full flex flex-row justify-center items-center py-3 NPC:py-10 my-20 z-30">
         <div className="flex flex-col NPC:flex-row items-center justify-start whitespace-nowrap mx-10 ">
           <img src="./Google__G__Logo 1.svg" alt="Google" className="w-[40px] tablet:w-[60px] mx-5 my-2.5 tablet:my-0"/>
           <Stars />

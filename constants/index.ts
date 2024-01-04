@@ -422,3 +422,60 @@ export const servicesDataExterior  = [
   }
 ];
 
+export const FAQList  = [
+  {
+    title: "How long will my home renovation take?",
+    description: "The duration of a home renovation depends on various factors, including the size and complexity of the project. A small-scale renovation may take a few weeks, while larger projects can span several months. During the initial consultation, we can provide you with an estimated timeline based on your specific renovation plans."
+  },
+  {
+    title: "How much will my home renovation cost?",
+    description: "The cost of a home renovation varies widely depending on factors such as the scope of work, materials used, and the level of customization. It's best to discuss your budget and renovation goals during the initial consultation so that we can provide a more accurate estimate based on your specific requirements."
+  },
+  {
+    title: "Do I need permits for my renovation?",
+    description: "Many renovations in Toronto and GTA require building permits, especially for structural modifications, electrical, plumbing, and HVAC work. Our team can guide you through the permit process and ensure that all necessary permits are obtained before the construction phase begins."
+  },
+  {
+    title: "Can I live in my home during the renovation?",
+    description: "In most cases, it is possible to live in your home during a renovation, depending on the extent of the work being done. However, it's important to consider factors such as noise, dust, and limited access to certain areas. We work closely with you to minimize disruptions and ensure your comfort throughout the renovation process."
+  },
+  {
+    title: "How do I choose materials and finishes for my renovation?",
+    description: "Our team of designers can assist you in selecting materials and finishes that align with your vision, style, and budget. We provide guidance based on our expertise and can show you samples, catalogs, and other resources to help you make informed decisions."
+  },
+  {
+    title: "What happens if we encounter unexpected issues during the renovation?",
+    description: "While we strive to anticipate and plan for potential challenges, unforeseen issues can arise during a renovation. Our experienced team is well-equipped to handle such situations, providing solutions and keeping you informed every step of the way. We aim to minimize delays and additional costs associated with unexpected issues."
+  },
+  {
+    title: "Can you work with my budget?",
+    description: "We understand that each renovation project has unique budget constraints. During the initial consultation, we take into account your budget and provide guidance on how to achieve your desired results within those parameters. We offer transparency in our pricing and work closely with you to find the best solutions that align with your budget and renovation goals."
+  },
+  {
+    title: "Do you offer warranties on your work?",
+    description: "Yes, we stand behind the quality of our workmanship. We offer warranties on the materials used and the work performed, providing you with peace of mind knowing that we are committed to your satisfaction and the long-term durability of your renovation."
+  }
+];
+export const FAQPermit  = [
+  {
+    title: "Building Permits:",
+    description: "Most significant renovations in Toronto and GTA require a building permit. This includes structural modifications, additions, and changes to electrical, plumbing, or HVAC systems. It is essential to obtain the necessary building permits before commencing any construction work."
+  },
+  {
+    title: "Zoning and Planning Regulations:",
+    description: "Toronto and GTA has zoning bylaws and planning regulations that dictate how properties can be used and what types of structures can be built. These regulations cover aspects such as setbacks, building heights, lot coverage, and allowable uses. It is important to ensure that your renovation project complies with these regulations to avoid any potential issues."
+  },
+  {
+    title: "Heritage Conservation:",
+    description: "If your property is located within a heritage conservation district or has heritage designation, additional regulations may apply. These regulations aim to preserve and protect the historical and architectural character of the area. Renovations or changes to properties with heritage significance may require special approvals and adherence to specific guidelines."
+  },
+  {
+    title: "Energy Efficiency Requirements:",
+    description: "Toronto and GTA has energy efficiency requirements in place to promote sustainable construction practices. This may include compliance with specific insulation, window, and HVAC system standards. Understanding and meeting these requirements can help improve the energy efficiency of your home and potentially qualify for rebates or incentives."
+  },
+  {
+    title: "Tree Protection:",
+    description: "Toronto and GTA has regulations in place to protect trees on private and public properties. Depending on the size and type of trees, you may need to obtain permits or adhere to specific guidelines when planning your renovation. It is important to assess any potential impact on trees and follow the necessary procedures to protect them during construction."
+  },
+
+];

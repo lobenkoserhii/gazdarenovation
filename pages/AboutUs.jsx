@@ -22,7 +22,7 @@ function AboutUs() {
   return (
     <Layout>
 <div className="relative max-w-[1440px] mx-auto">
-    <Star />
+<Star customClass="absolute top-2" zIndexClass="z-20" />
 
        <div className="flex flex-col tablet:flex-row items-start justify-center mt-10 tablet:mt-0">
         
@@ -85,7 +85,7 @@ function AboutUs() {
     <Phase/>
     <Scroller text="our works" />
     <SliderWork />
-    <div className="bg-Yl clip_3 w-full flex flex-row justify-center items-center py-3 NPC:py-10 NPC:my-10 z-30">
+    <div className="bg-Yl clip_3 w-full flex flex-row justify-center items-center py-3 NPC:py-10 my-20 z-30">
       <div className="flex flex-col NPC:flex-row items-center justify-start whitespace-nowrap mx-10 ">
         <img src="./Google__G__Logo 1.svg" alt="Google" className="w-[40px] tablet:w-[60px] mx-5 my-2.5 tablet:my-0"/>
         <Stars />
@@ -97,14 +97,7 @@ function AboutUs() {
         <p className="NPC:ml-5 text-lg tablet:text-2xl text-BGC font-light font-SR">(99 review)</p>
       </div>
     </div>
-    <FaqSlider/>
-<div className='relative flex flex-row justify-between items-center my-[140px] NPC:mx-[200px]'>
-  <img src="./2022 Digital Medal.png" alt="Digital Medal" className="w-[80px] tablet:w-[130px]" />
-  <img src="./2021 CBRB Inc Logo.png" alt="CBRB" className="w-[80px] tablet:w-[130px]" />
-  <img src="./2022 CBRB Verified.png" alt="CBRB" className="w-[80px] tablet:w-[130px]" />
-  <img src="./HomeStar_2022.png" alt="HomeStars" className="w-[80px] tablet:w-[130px]" />
-  <img src="./2022 CBRB Inc Logo.png" alt="CBRB" className="w-[80px] tablet:w-[130px]" />
-</div>
+  
     <PopUpEmail />
     <h1 className="text-White text-6xl mb-10 ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
     <ContactPage />

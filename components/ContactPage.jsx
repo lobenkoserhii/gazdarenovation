@@ -5,7 +5,7 @@ const ContactInfoItem = ({ iconSrc, altText, contactDetails }) => (
     <img src={iconSrc} alt={altText} className="mr-4" /> 
     <div className="flex flex-col">
       {contactDetails.map((detail, index) => (
-        <p key={index} className="text-BGC text-[25px] font-extrabold font-SB uppercase leading-relaxed tracking-normal italic">
+        <p key={index} className="text-BGC text-base tablet:text-[25px] font-extrabold font-SB uppercase leading-relaxed tracking-normal italic">
           {detail}
         </p>
       ))}
@@ -16,9 +16,9 @@ const ContactInfoItem = ({ iconSrc, altText, contactDetails }) => (
 const ContactPage = () => {
   return (
     <div className="flex w-full relative">
-      <div className="bg-Yl text-BGC flex flex-col justify-center pl-12 w-[55%] h-[32rem] z-10 clip_4">
+      <div className="bg-Yl text-BGC flex flex-col justify-center tablet:pl-12 w-[55%] h-[32rem] z-10 clip_4">
         <div className="flex flex-col items-start justify-center self-center gap-4 z-10">
-          <h3 className="text-BGC text-[2.8rem] font-extrabold font-SB uppercase italic leading-[2.8rem] tracking-wide">Gazda Group Inc.</h3>
+          <h3 className="text-BGC text-3xl tablet:text-[2.8rem] font-extrabold font-SB uppercase italic leading-[2.8rem] tracking-wide">Gazda Group Inc.</h3>
           
           <ContactInfoItem 
             iconSrc="/phone.svg" 

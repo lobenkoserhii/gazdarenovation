@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 
 function PopUpEmail() {
@@ -32,37 +32,58 @@ function PopUpEmail() {
 
   const labelClass = (inputId) => 
     `flex flex-row items-end text-[17px] font-medium font-SR w-full ${focusedInput === inputId ? 'text-Yl' : 'text-White'} whitespace-nowrap overflow-hidden`;
-    
+
     const handleSubmit = async (event) => {
       event.preventDefault();
-  
+      const formData = {
+        email: event.target.email.value,
+        name: event.target.name.value,
+        phone: event.target.phone.value,
+        address: event.target.address.value,
+        repair: event.target.repair.value,
+      };
 
-    };
-    
+    const response = await fetch('/api/sendEmail', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    });
+
+    if (response.ok) {
+      console.log('Email sent successfully');
+      handleClosePopup(); // Закрытие формы после успешной отправки
+    } else {
+      console.error('Error sending email');
+      const errorText = await response.text();
+      console.error('Server error message:', errorText);
+    }
+  };
 
   return (
     <div>
-      <div className="relative flex flex-row items-center justify-center mb-20 mt-20 py-10 bg-Yl ">
-        <div className="flex flex-col items-start">
-          <h1 className="text-BGC text-[70px] font-extrabold font-SB italic uppercase tracking-wide ">have any question?</h1>
-          <h3 className="text-BGC text-[25px] font-extrabold font-SB uppercase italic mt-[-20px]">
+      <div className="relative flex flex-col items-start NPC:flex-row NPC:items-center NPC:justify-between mt-[200px] mb-10 py-10 px-20 bg-Yl">
+        <div className="flex flex-col">
+          <h1 className="text-BGC text-[40px] NPC:text-[70px] NPC:leading-[70px] leading-[40px] font-extrabold font-SB italic uppercase tracking-wide pr-[130px]">have any question?</h1>
+          <h3 className="text-BGC text-xl NPC:text-[25px] font-extrabold font-SB uppercase italic">
             Email us
           </h3>
         </div>
-        <div className="drop-shadow-md">
+        <div className="drop-shadow-md NPC:pr-[250px]">
           <button
             onClick={handleEmailButtonClick}
-            className="bg-White text-BGC text-3xl px-[70px] clip_2 ml-[100px] font-extrabold font-SB italic uppercase hover:bg-Yl drop-shadow-2xl hover:text-White"
+            className="bg-White text-BGC text-3xl px-[70px] NPC:px-[50px] clip_2 font-extrabold font-SB italic uppercase hover:bg-Yl drop-shadow-2xl hover:text-White py-3 mt-5 NPC:mt-0 whitespace-nowrap"
           >
             E-Mail
           </button>
         </div>
-        <img src="./man_email.png" alt="Email Form" className="w-[200px] absolute bottom-0 right-10" />
+        <img src="./man_email.png" alt="Email Form" className="w-[200px]  absolute bottom-0 right-10" />
       </div>
 
       {isPopupVisible && (
         <div className="fixed inset-0 bg-Black bg-opacity-80 flex justify-center items-center z-50">
-          <div className="w-[60rem] h-[38rem] bg-BGC relative flex-shrink-0 p-10 rounded-lg">
+          <div className="w-full max-w-[60rem] h-[38rem] bg-BGC relative flex-shrink-0 p-10 rounded-lg">
             <div className="absolute right-0 top-0 mt-4 mr-4">
               <button onClick={handleClosePopup} className="text-White absolute top-1 right-1">
                 <CloseIcon /> 
@@ -72,47 +93,49 @@ function PopUpEmail() {
               <div className="absolute top-[3.5rem] right-[-7rem]">
                 <div className="w-[42rem] h-[8.25rem] bg-cover bg-[url('/poligon.svg')] bg-no-repeat flex flex-col items-center justify-center">
                   <h1 className="text-BGC text-6xl font-extrabold font-SB italic uppercase">Leave an application</h1>
-                  <h3 className="text-BGC text-[25px] font-extrabold font-SB italick uppercase">
+                  <h3 className="text-BGC text-[25px] font-extrabold font-SB italic uppercase">
                     Start Your Repair Journey Today
                   </h3>
                 </div>
               </div>
-              <form onSubmit={handleSubmit} className="flex flex-col items-center pt-4 gap-10 w-full px-10 mt-[10rem] ">
+              <form onSubmit={handleSubmit} className="flex flex-col items-center pt-4 gap-5 tablet:gap-10 w-full px-10 mt-[10rem]">
+              
                 <label className={labelClass('repair')}>
                   I need repair for:
-                  <input type="text" className="input-custom w-full p-2" 
+                  <input type="text" name="repair" className="input-custom w-full p-2" 
                          onFocus={() => handleFocus('repair')} 
                          onBlur={handleBlur} />
                 </label>
-                <div className="flex gap-4 w-full">
+                <div className="flex flex-col tablet:flex-row gap-5 tablet:gap-5 w-full">
                   <label className={labelClass('name')}>
                     Name:
-                    <input type="text" className="input-custom w-full p-2" 
+                    <input type="text" name="name" className="input-custom w-full p-2" 
                            onFocus={() => handleFocus('name')} 
                            onBlur={handleBlur} />
                   </label>
                   <label className={labelClass('email')}>
                     Email:
-                    <input type="email" className="input-custom w-full p-2" 
+                    <input type="email" name="email" className="input-custom w-full p-2" 
                            onFocus={() => handleFocus('email')} 
                            onBlur={handleBlur} />
                   </label>
                   <label className={labelClass('phone')}>
                     Phone Number:
-                    <input type="tel" className="input-custom w-full p-2" 
+                    <input type="tel" name="phone" className="input-custom w-full p-2" 
                            onFocus={() => handleFocus('phone')} 
                            onBlur={handleBlur} />
                   </label>
                 </div>
                 <label className={labelClass('address')}>
                   Address:
-                  <input type="text" className="input-custom w-full p-2" 
+                  <input type="text" name="address" className="input-custom w-full p-2" 
                          onFocus={() => handleFocus('address')} 
                          onBlur={handleBlur} />
                 </label>
                 <button type="submit" className="bg-Yl clip_2 text-BGC text-[29px] px-[5rem] mt-4 font-extrabold font-SB uppercase">
                   Submit request
                 </button>
+                
               </form>
             </div>
           </div>

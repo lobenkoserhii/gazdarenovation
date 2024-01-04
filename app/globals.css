@@ -118,13 +118,23 @@ body {
 
 }
 
-.swiper-button-next-custom, .swiper-button-prev-custom {
-  opacity: 0; /* Прозрачные на всех экранах */
+.next-custom, .prev-custom {
+  opacity: 0; 
 }
 
 @media (max-width: 1024px) {
-  .swiper-button-next-custom, .swiper-button-prev-custom {
-    opacity: 1; /* Видимые на экранах меньше 1024px */
+  .next-custom, .prev-custom {
+    opacity: 1; 
+  }
+}
+
+.next-work, .prev-work {
+  opacity: 0; 
+}
+
+@media (max-width: 1024px) {
+  .next-work, .prev-work{
+    opacity: 100; 
   }
 }
  
@@ -233,3 +243,25 @@ body {
   right: 0;
   bottom: 0;
 }
+
+.bg-gradient-with-image_2 {
+  background-image: linear-gradient(to bottom, transparent 75%, #262626 100%), url('/bg_hero-mob.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.your-div-class {
+  background-color: #F4C300;
+}
+
+@media (min-width: 1024px) { 
+  .your-div-class {
+    background-color: transparent;
+    position: absolute;
+    top: 44rem;
+    left: 0;
+    right: 0;
+  }
+}
+
