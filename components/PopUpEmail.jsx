@@ -63,7 +63,7 @@ function PopUpEmail() {
 
   return (
     <div>
-      <div className="relative flex flex-col items-start NPC:flex-row NPC:items-center NPC:justify-between mt-[200px] mb-10 py-10 px-20 bg-Yl">
+      <div className="relative flex flex-col items-start NPC:flex-row NPC:items-center NPC:justify-between mt-[120px] tablet:mt-[200px] mb-10 px-10 py-5 tablet:p-10 bg-Yl">
         <div className="flex flex-col">
           <h1 className="text-BGC text-[40px] NPC:text-[70px] NPC:leading-[70px] leading-[40px] font-extrabold font-SB italic uppercase tracking-wide pr-[130px]">have any question?</h1>
           <h3 className="text-BGC text-xl NPC:text-[25px] font-extrabold font-SB uppercase italic">
@@ -73,12 +73,12 @@ function PopUpEmail() {
         <div className="drop-shadow-md NPC:pr-[250px]">
           <button
             onClick={handleEmailButtonClick}
-            className="bg-White text-BGC text-3xl px-[70px] NPC:px-[50px] clip_2 font-extrabold font-SB italic uppercase hover:bg-Yl drop-shadow-2xl hover:text-White py-3 mt-5 NPC:mt-0 whitespace-nowrap"
+            className="bg-White text-BGC text-2xl tablet:text-3xl px-[40px] NPC:px-[50px] clip_2 font-extrabold font-SB italic uppercase hover:bg-Yl drop-shadow-2xl hover:text-White py-1 mt-5 NPC:mt-0 whitespace-nowrap"
           >
             E-Mail
           </button>
         </div>
-        <img src="./man_email.png" alt="Email Form" className="w-[200px]  absolute bottom-0 right-10" />
+        <img src="./man_email.png" alt="Email Form" className="w-[170px] tablet:w-[200px]  absolute bottom-0 right-2 tablet:right-10" />
       </div>
 
       {isPopupVisible && (

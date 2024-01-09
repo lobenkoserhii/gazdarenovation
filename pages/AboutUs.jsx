@@ -27,7 +27,7 @@ function AboutUs() {
        <div className="flex flex-col tablet:flex-row items-start justify-center mt-10 tablet:mt-0">
         
      
-        <div className="flex-1 my-[150px] ml-[150px] mr-[200px]">
+        <div className="flex-1 tablet:my-[150px] mt-[150px] mx-10 tablet:ml-[150px] tablet:mr-[200px]">
             <h1 className="text-White text-6xl text-left font-extrabold font-SB italic uppercase leading-[61.14px] mb-4">
                 About us
             </h1>
@@ -45,17 +45,17 @@ function AboutUs() {
 
         
         <div className="flex flex-col items-end justify-center ml-10 tablet:ml-0">
-        <img className="w-[225px] h-[300px] mr-[150px] object-cover shadow relative absolute top-[100px] right-0" src="./About_us1.png" alt="About_us" />
-          <img className="w-[225px] h-[300px] mr-[150px] object-cover shadow relative absolute top-[0px] right-[150px] " src="./About_us2.png" alt="About_us" />
+        <img className="w-[225px] h-[300px] mr-[150px] object-cover shadow relative absolute top-10 right-[-120px] tablet:top-[100px]  tablet:right-0" src="./About_us1.png" alt="About_us" />
+          <img className="w-[225px] h-[300px] mr-[150px] object-cover shadow relative absolute tablet:top-[0px] tablet:right-[150px] " src="./About_us2.png" alt="About_us" />
         </div>
 
     </div>
 
-    <div className="flex flex-col-reverse tablet:flex-row-reverse items-center tablet:items-start justify-center space-y-20 tablet:space-y-0 tablet:space-x-[150px] mb-[50px]">
+    <div className="flex flex-col-reverse tablet:flex-row-reverse items-center tablet:items-start justify-center space-y-20 tablet:space-y-0 tablet:space-x-[150px] tablet:mb-[50px]">
     
-    {/* Блок для текста */}
+   
     <div className="flex-1">
-      <p className="text-White text-[17px] ml-[50px] mr-[150px] mt-[50px] font-normal font-SR">
+      <p className="text-White text-[17px] m-10 tablet:ml-[50px] tablet:mr-[150px] tablet:mt-[50px] font-normal font-SR">
         What sets us apart is our unwavering commitment to customer satisfaction. We prioritize open communication, attention to detail, 
         and timely project completion. We believe in working closely with our clients, understanding their vision, and translating it into reality.
         <br /><br />
@@ -99,7 +99,7 @@ function AboutUs() {
     </div>
   
     <PopUpEmail />
-    <h1 className="text-White text-6xl mb-10 ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
+    <h1 className="text-White text-[27px] tablet:text-6xl tablet:mb-10 ml-[40px] tablet:ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
     <ContactPage />
     <Copyright />
     

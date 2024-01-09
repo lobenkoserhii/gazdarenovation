@@ -115,7 +115,7 @@ function Hero() {
 </div>
 
 
-<h1 className="text-White text-6xl my-10 text-center font-extrabold font-SB italic uppercase leading-[61.14px]">review</h1>
+<h1 className="text-White text-[27px] tablet:text-6xl my-3 tablet:my-10 text-center font-extrabold font-SB italic uppercase leading-[61.14px]">review</h1>
 <TestimonialsSlider/>
 
 <div className="bg-Yl clip_3 w-full flex flex-row justify-center items-center py-3 NPC:py-10 NPC:my-10 z-30">
@@ -136,16 +136,16 @@ function Hero() {
   
 </div>
 
-<h1 className="text-White text-6xl mt-[50px] mb-10 text-center font-extrabold font-SB italic uppercase leading-[61.14px]">faq</h1>
+<h1 className="text-White text-[27px] tablet:text-6xl my-3 tablet:my-10 text-center font-extrabold font-SB italic uppercase leading-[61.14px]">faq</h1>
 
 
 <FaqSlider/>
-<div className='relative flex flex-row justify-between items-center my-[140px] NPC:mx-[200px]'>
-  <img src="./2022 Digital Medal.png" alt="Digital Medal" className="w-[80px] tablet:w-[130px]" />
-  <img src="./2021 CBRB Inc Logo.png" alt="CBRB" className="w-[80px] tablet:w-[130px]" />
-  <img src="./2022 CBRB Verified.png" alt="CBRB" className="w-[80px] tablet:w-[130px]" />
-  <img src="./HomeStar_2022.png" alt="HomeStars" className="w-[80px] tablet:w-[130px]" />
-  <img src="./2022 CBRB Inc Logo.png" alt="CBRB" className="w-[80px] tablet:w-[130px]" />
+<div className='relative flex flex-row justify-between items-center px-3 mt-8 tablet:my-[140px] NPC:mx-[200px]'>
+  <img src="./2022 Digital Medal.png" alt="Digital Medal" className="w-[60px] tablet:w-[130px]" />
+  <img src="./2021 CBRB Inc Logo.png" alt="CBRB" className="w-[60px] tablet:w-[130px]" />
+  <img src="./2022 CBRB Verified.png" alt="CBRB" className="w-[60px] tablet:w-[130px]" />
+  <img src="./HomeStar_2022.png" alt="HomeStars" className="w-[60px] tablet:w-[130px]" />
+  <img src="./2022 CBRB Inc Logo.png" alt="CBRB" className="w-[60px] tablet:w-[130px]" />
 </div>
 
 
@@ -153,7 +153,7 @@ function Hero() {
 
 <PopUpEmail/>
 
-<h1 className="text-White text-6xl mb-10 ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
+<h1 className="text-White text-[27px] tablet:text-6xl tablet:mb-10 ml-[40px] tablet:ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
 
 
 

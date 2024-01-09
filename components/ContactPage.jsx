@@ -15,8 +15,8 @@ const ContactInfoItem = ({ iconSrc, altText, contactDetails }) => (
 
 const ContactPage = () => {
   return (
-    <div className="flex w-full relative">
-      <div className="bg-Yl text-BGC flex flex-col justify-center tablet:pl-12 w-[55%] h-[32rem] z-10 clip_4">
+    <div className="flex w-full h-[40rem] tablet:h-[32rem] relative">
+      <div className="bg-Yl text-BGC flex flex-col w-full h-[20rem] tablet:flex-row justify-center tablet:pl-12 tablet:w-[55%] tablet:h-[32rem] z-10 clip_4">
         <div className="flex flex-col items-start justify-center self-center gap-4 z-10">
           <h3 className="text-BGC text-3xl tablet:text-[2.8rem] font-extrabold font-SB uppercase italic leading-[2.8rem] tracking-wide">Gazda Group Inc.</h3>
           
@@ -38,8 +38,8 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="w-[55%] h-[32rem] absolute right-0 z-[-1]">
-        <img src="./map.png" alt="Map" className="h-full w-full object-cover" />
+      <div className="h-[40rem] w-full tablet:w-[55%] tablet:h-[32rem] absolute top-0 tablet:right-0 z-[-1]">
+        <img src="./map_mob.png" alt="Map" className="map-image h-[40rem] tablet:h-full w-full object-cover" />
       </div>
     </div>
   );

@@ -34,8 +34,8 @@ const Accordions = () => {
           prevEl: '.prev-custom',
         }}
         breakpoints={{
-          320: { slidesPerView:2},
-          640: { slidesPerView:3},
+          320: { slidesPerView:1},
+          640: { slidesPerView:2},
           1024: { slidesPerView:4 }
         }}
         modules={[Navigation, FreeMode]}
@@ -57,9 +57,9 @@ const Accordions = () => {
               <div className="gallery-wrap wrap-effect">
                 <div className="item hover-gradient" style={{ backgroundImage: `url(${item.imgSrc})` }}>
                   <div className="text-BGC text-4xl tablet:text-[60px] font-bold z-20 ">{item.label}</div>
-                   <div className="item-content">
-                   <h2 className=" text-White text-[27px] tablet:text-[46px] font-extrabold font-SB uppercase leading-[28px] tablet:leading-[46px] ">{slideInfo[idx].label}</h2>
-                    <p className=" text-White tablet:text-[17px] text-sm font-light font-SR tablet:mt-4 mt-2">{slideInfo[idx].text}</p>
+                   <div className="item-content ">
+                   <h2 className="tablet:w-[200px] text-White text-[27px] tablet:text-[32px] font-extrabold font-SB uppercase leading-[28px] tablet:leading-[32px] ml-[15px] ">{slideInfo[idx].label}</h2>
+                    <p className="tablet:w-[200px] NPC:w-[250px]  text-White tablet:text-[14px] text-[12px] mr-[10px] font-light font-SR tablet:mt-4 mt-2">{slideInfo[idx].text}</p>
                     <a href={`/Services#${slideInfo[idx].href}`} className="inline-flex items-center clip_2 mt-5 px-[40px] tablet:px[80px] py-1 bg-Yl text-DG  text-lg tablet:text-[25px] tracking-wider font-extrabold font-SB uppercase whitespace-nowrap">More</a>
                     </div>
                 </div>

@@ -30,20 +30,20 @@ const blocks = [
 
 
   const Block = ({ block }) => {
-    const [isHovered, setIsHovered] = useState(true); // Установлено в true по умолчанию
+    const [isHovered, setIsHovered] = useState(true); 
   
     useEffect(() => {
       const handleResize = () => {
         if (window.innerWidth > 640) {
-          setIsHovered(false); // Отменяем ховер на больших экранах
+          setIsHovered(false);
         } else {
-          setIsHovered(true); // Включаем ховер на маленьких экранах
+          setIsHovered(true); 
         }
       };
   
-      // Вызываем функцию при монтировании и размонтировании компонента
+     
       window.addEventListener('resize', handleResize);
-      handleResize(); // Инициализируем при первом рендеринге
+      handleResize(); 
   
       return () => window.removeEventListener('resize', handleResize);
     }, []);
@@ -67,7 +67,7 @@ const blocks = [
           )}
         </div>
   
-        {/* Основной блок: заголовок, описание и кнопка */}
+      
         <div className="flex-grow mt-10 tablet:mt-15">
           <h2 className={`font-SB text-[20px] tablet:text-[25px] ${isHovered ? 'text-Light' : 'text-White'}`}>
             {block.title}
@@ -77,17 +77,18 @@ const blocks = [
               <p className="text-Light max-w-[200px] text-[14px] tablet:text-[17px]">
                 {block.description}
               </p>
-              <button className="text-Light hover:text-White hidden tablet:flex items-center mt-5">
-                LEARN MORE
-                <svg className="ml-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" />
-                </svg>
-              </button>
+              <a href="/Process" className="text-Light hover:text-White hidden tablet:flex items-center mt-5">
+  LEARN MORE
+  <svg className="ml-2 w-6 h-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M16.72 7.72a.75.75 0 011.06 0l3.75 3.75a.75.75 0 010 1.06l-3.75 3.75a.75.75 0 11-1.06-1.06l2.47-2.47H3a.75.75 0 010-1.5h16.19l-2.47-2.47a.75.75 0 010-1.06z" />
+  </svg>
+</a>
+
             </div>
           )}
         </div>
   
-        {/* Картинка, отображаемая только при наведении */}
+       
         {isHovered && (
           <img src={block.image} alt={block.title} className="clip absolute top-0 right-0 h-[103px]" />
         )}
@@ -100,21 +101,22 @@ const blocks = [
   function Phase() {
     return (
       <section>
-      <div className="flex flex-col items-center space-y-8 my-[60px]">
+      <div className="flex flex-col items-center space-y-8 my-10">
         <div className="w-full tablet:w-[700px] NPC:w-[900px] PC:w-[1100px] flex justify-start items-center mb-8 pl-[80px]">
           <h1 className="text-White italic text-[27px] mr-[80px] tablet:mr-0 tablet:text-5xl font-extrabold uppercase leading-7 text-left PC:max-w-[1100px] ">
             WE ARE RELIABLE HOME REPAIR CONTRACTORS IN TORONTO
           </h1>
         </div>
-        <div className="grid grid-cols-1 tablet:gap-8 tablet:grid-cols-4 gap-12 w-full px-[100px]">
+        <div className="grid grid-cols-1 tablet:gap-8 tablet:grid-cols-4 gap-12 w-full px-[60px] tablet:p-15">
           {blocks.map((block, index) => (
             <Block key={index} block={block} />
           ))}
         </div>
-        {/* Кнопка Learn More всегда видна под блоками */}
-        <div className="text-center mt-4 tablet:hidden">
-        <button className="inline-flex items-center clip_2 px-[40px] py-2 bg-White text-Black font-bold italic uppercase whitespace-nowrap">
-  LEARN MORE </button>
+               <div className="text-center mt-4 tablet:hidden">
+        <a href="/Process" className="inline-flex items-center clip_2 px-[40px] py-2 bg-White text-Black font-bold italic uppercase whitespace-nowrap">
+  LEARN MORE
+</a>
+
 </div>
 
         </div>

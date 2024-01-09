@@ -136,7 +136,7 @@ function Services() {
         </div>
       </div>
       <PopUpEmail />
-      <h1 className="text-White text-6xl mb-10 ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
+      <h1 className="text-White text-[27px] tablet:text-6xl tablet:mb-10 ml-[40px] tablet:ml-[257px] text-start font-extrabold font-SB italic uppercase leading-[61.14px]">We work here</h1>
       <ContactPage />
       <Copyright />
       </div>
