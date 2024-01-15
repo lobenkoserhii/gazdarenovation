@@ -36,7 +36,7 @@ const FAQItem = ({ title, description, iconSrc }) => {
           style={{ transition: 'transform 0.3s ease' }}
         />
       </div>
-      {isOpen && <p className="mt-2 font-SR text-White w-[480px]">{description}</p>}
+      {isOpen && <p className="mt-2 font-SR text-White w-full ">{description}</p>}
     </div>
   );
 };
@@ -47,15 +47,15 @@ function Questions() {
       <div className="max-w-[1440px] mx-auto">
         <Star customClass="absolute relative top-2" zIndexClass="z-20" />
 
-        <div className="flex items-start justify-start  mt-10">
-          <div className="flex flex-col NPC:flex-row ">
-            <div className="bg-[url('/bg_rec_1.png')] bg-no-repeat h-[168px] w-[470px] bg-cover  flex items-center justify-center">
-              <h1 className="text-BGC text-3xl font-extrabold font-SB uppercase leading-[30.57px] text-start italic">
+        <div className="flex items-center mt-10">
+          <div className="flex flex-col NPC:flex-row NPC:justify-between w-full ">
+            <div className="bg-[url('/bg_rec_1.png')] bg-no-repeat h-[168px] w-full NPC:w-[600px] bg-cover flex items-center justify-center">
+              <h1 className="text-BGC text-3xl font-extrabold font-SB uppercase leading-[30.57px] italic">
                 Frequently Asked <br/> Questions About<br/> Home Renovations:
               </h1>
             </div>
 
-            <div className="flex flex-col m-20 NPC:mt-0 mr-20 ml-20 ">
+            <div className="flex flex-col m-10  NPC:mt-0 ">
               {FAQList.map((faq, index) => (
                 <FAQItem key={index} 
                 title={faq.title} 
@@ -66,7 +66,7 @@ function Questions() {
           </div>
         </div>
         <div className="flex items-end justify-end NPC:justify-between NPC:items-start flex-col-reverse NPC:flex-row">
-  <div className="flex flex-col m-20 NPC:w-[600px] NPC:mt-0">
+  <div className="flex flex-col m-10 NPC:w-full NPC:mt-0">
     {FAQPermit.map((faq, index) => (
       <FAQItem key={index}
       title={faq.title}
@@ -74,7 +74,7 @@ function Questions() {
       iconSrc="./Vector_V.svg" />
     ))}
   </div>
-  <div className="bg-[url('/bg_rec_2.png')] bg-no-repeat h-[168px] w-[470px] bg-cover flex items-center justify-center">
+  <div className="bg-[url('/bg_rec_2.png')] bg-no-repeat h-[168px] w-full bg-cover flex items-center justify-center">
     <h1 className="text-BGC text-3xl font-extrabold font-SB uppercase leading-[30.57px] text-start italic">
     Information<br/> on Permits<br/> and Regulations<br/>Specific to Toronto
     </h1>

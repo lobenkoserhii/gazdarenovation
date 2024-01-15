@@ -99,7 +99,7 @@ function Services() {
 
   return (
     <Layout>
-      <div className="h-[733px] relative max-w-[1440px] mx-auto">
+      <div className="h-[733px] relative max-w-[1440px] mx-auto ">
       <Star customClass="absolute top-2" zIndexClass="z-20" />
         <div style={{
           backgroundImage: `url(${backgroundImage})`,
