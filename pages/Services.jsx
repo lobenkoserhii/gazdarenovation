@@ -28,7 +28,7 @@ const Stars = ({ fillColor = "#262626" }) => (
 
 function Services() {
   const [activeCategory, setActiveCategory] = useState('Kitchen');
-  const [backgroundImage, setBackgroundImage] = useState('/kitchen.png');
+  const [backgroundImage, setBackgroundImage] = useState('/kitchen.jpeg');
   const [pageTitle, setPageTitle] = useState('Kitchen Remodeling');
 
   useEffect(() => {
@@ -55,7 +55,7 @@ function Services() {
     window.location.hash = categoryKey;
     switch (categoryKey) {
       case 'Kitchen':
-        setBackgroundImage('/kitchen.png');
+        setBackgroundImage('/kitchen.jpeg');
         setPageTitle('Kitchen Remodeling');
         break;
       case 'Bathroom':
@@ -67,7 +67,7 @@ function Services() {
         setPageTitle('Basement Finishing');
         break;
       case 'WholeHouse':
-        setBackgroundImage('/wholehouse.png');
+        setBackgroundImage('/wholehouse.jpeg');
         setPageTitle('Whole-House Renovations');
         break;
       case 'Exterior':

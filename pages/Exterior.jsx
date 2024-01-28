@@ -24,8 +24,8 @@ function Exterior() {
 
       <div className="flex flex-col tablet:flex-row items-center justify-center my-10  tablet:my-[120px] ">
         <div className="relative">
-        <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-0 tablet:left-[130px] z-10" src="./kitchen_p2.png" alt="Kichen" />
-        <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-[-80px] tablet:left-0 " src="./kitchen_p3.png" alt="Kichen" />
+        <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-0 tablet:left-[130px] z-10" src="./exterior_p2.jpg" alt="Exterior" />
+        <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-[-80px] tablet:left-0 " src="../exterior_p3.jpg" alt="Exterior" />
         </div>
         <div className="tablet:ml-[280px] mx-[56px]">
           {servicesDataExterior.map((service, index) => (

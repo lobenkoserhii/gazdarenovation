@@ -155,9 +155,9 @@ export const Phase =
 export const slideData = [
  
   { href: '/Bathroom', imgSrc: '/bathroom.png', label: 'Bathroom' },
-  { href: '/Kitchen', imgSrc: '/kitchen.png', label: 'Kitchen' },
+  { href: '/Kitchen', imgSrc: '/kitchen.jpeg', label: 'Kitchen' },
   { href: '/Basement', imgSrc: '/basement.png', label: 'Basement' },
-  { href: '/WholeHouse', imgSrc: '/wholehouse.png', label: 'House' },
+  { href: '/WholeHouse', imgSrc: '/wholehouse.jpeg', label: 'House' },
   { href: '/Exterior', imgSrc: '/exterior.png', label: 'Exterior' }
 ];
 

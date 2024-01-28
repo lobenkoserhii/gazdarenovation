@@ -28,7 +28,7 @@ function Basement() {
       <div className="flex flex-col tablet:flex-row items-center justify-center my-10  tablet:my-[120px] ">
         <div className="relative">
         <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-0 tablet:left-[130px] z-10"  src="./basement_p2.png" alt="Basement" />
-        <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-[-80px] tablet:left-0 " src="./basement_p3.jpg" alt="Basement" />
+        <img className="w-[300px] h-[450px] shadow tablet:relative flex flex-col tablet:absolute tablet:top-[-80px] tablet:left-0 " src="./basement_p3.png" alt="Basement" />
         </div>
         <div className="tablet:ml-[280px] mx-[56px]">
           {servicesDataBasemen.map((service, index) => (
